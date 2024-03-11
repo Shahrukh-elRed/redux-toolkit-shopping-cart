@@ -21,7 +21,7 @@ const Products = () => {
   }, []);
 
   const handleAdd = (product) => {
-    dispatch(add(product));
+    dispatch(add({...product, id: product.id + Math.random()}));
   };
 
   if (status === STATUSES.LOADING)
