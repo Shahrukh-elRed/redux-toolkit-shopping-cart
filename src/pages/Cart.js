@@ -8,12 +8,14 @@ const Cart = () => {
   const handleRemove = (productId) => {
     dispatch(remove(productId));
   };
+
   return (
     <div>
       <h3>Cart</h3>
       <div className="cartWrapper">
-        {products.map((product) => (
-          <div className="cartCard">
+        {products.length === 0 ? <div>Your Cart is empty</div> 
+          : products.map((product) => (
+          <div key={product.id} className="cartCard">
             <img src={product.image} alt="" />
             <h5>{product.title}</h5>
             <h5>{product.price}</h5>
