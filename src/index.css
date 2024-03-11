@@ -67,3 +67,33 @@ img {
   padding: 14px;
   border-radius: 5px;
 }
+
+.navBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.loader {
+  width: 30px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(155, 7, 7);
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {to{transform: rotate(1turn)}}

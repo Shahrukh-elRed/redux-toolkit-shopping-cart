@@ -13,7 +13,7 @@ const Cart = () => {
     <div>
       <h3>Cart</h3>
       <div className="cartWrapper">
-        {products.length === 0 ? <div>Your Cart is empty</div> 
+        {products.length === 0 ? <div className="loaderContainer"><h3>Your Cart is empty</h3></div> 
           : products.map((product) => (
           <div key={product.id} className="cartCard">
             <img src={product.image} alt="" />

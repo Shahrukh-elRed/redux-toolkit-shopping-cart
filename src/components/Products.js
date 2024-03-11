@@ -25,10 +25,16 @@ const Products = () => {
   };
 
   if (status === STATUSES.LOADING)
-  return <h2>Loading...</h2>
+  return (
+    <div className="loaderContainer">
+      <div className="loader"></div>
+    </div>)
 
   if (status === STATUSES.ERROR)
-  return <h2>Something went wrong!</h2>
+  return (
+    <div className="loaderContainer">
+      <h2>Something went wrong!</h2>
+    </div>)
 
   return (
     <div className="productsWrapper">

@@ -5,13 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const items = useSelector((state) => state.cart);
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
+    <div className="navBarContainer">
       <span className="logo">REDUX TOOLKIT STORE</span>
       <div>
         <Link className="navLink" to="/">
